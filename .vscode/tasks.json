@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "start backend dev",
+            "type": "shell",
+            "options": {
+                "env": {
+                    "NODE_ENV": "development"
+                }
+            },
+            "windows": {
+                "command": "npm run dev"
+            },
+            "linux": {
+                "command": "npm run dev"
+            },
+            "osx": {
+                "command": "npm run dev"
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "dev",
+            "problemMatcher": []
+        }
+    ]
+}

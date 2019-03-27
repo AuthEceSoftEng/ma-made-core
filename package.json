@@ -1,0 +1,70 @@
+{
+  "name": "checkout",
+  "version": "0.0.1",
+  "description": "Open Data and Services Platform",
+  "scripts": {
+    "test": "jest --coverage --forceExit & jest-coverage-badges",
+    "jest-clear-cache": "jest --clearCache",
+    "dev": "nodemon server.js | ./node_modules/bunyan/bin/bunyan",
+    "prod": "node server.js",
+    "migration_template": "node back-end/migrations/template.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "bunyan": "^1.8.12",
+    "cors": "^2.8.4",
+    "csvtojson": "^2.0.8",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "express-boom": "^2.0.0",
+    "express-validator": "^4.3.0",
+    "fast-csv": "^2.4.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^7.2.1",
+    "lodash": "^4.17.4",
+    "mongodb": "^3.0.0-rc0",
+    "mongoose": "^5.0.3",
+    "morgan": "^1.9.0",
+    "multer": "^1.4.1",
+    "q": "^1.5.1",
+    "request": "^2.83.0",
+    "shelljs": "^0.7.4",
+    "terminate": "^2.1.2",
+    "turndown": "^5.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.3",
+    "jest-coverage-badges": "^1.0.0",
+    "nodemon": "^1.12.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "marketing-app/",
+      "__tests__"
+    ]
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/coverage/"
+    ]
+  }
+}
